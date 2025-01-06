@@ -23,6 +23,7 @@ jobs:
       - name: Run tests
         run: npm run test
       - name: Trigger render deployment
+        if: ${{ github.event_name == 'push' }}
         uses: glarivie/render-deploy-service-action@v1.0.5
         with:
           serviceId: ${{ secrets.RENDER_SERVICE_ID }}

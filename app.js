@@ -12,7 +12,7 @@ app.get('/version', (req, res) => {
 });
 
 app.get('/health', (req, res) => {
-  res.send('latest ok');
+  res.send('test pull req');
 });
 
 app.listen(PORT, () => {

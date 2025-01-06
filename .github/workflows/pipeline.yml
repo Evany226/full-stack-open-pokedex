@@ -20,8 +20,7 @@ jobs:
       - name: Run tests
         run: npm run test
       - name: Trigger render deployment
-        uses: sws2apps/render-deployment@main #consider using pin for dependabot auto update
+        uses: glarivie/render-deploy-service-action@v1.0.5
         with:
-          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
-          apiKey: ${{ secrets.RENDER_API_KEY }}
-          multipleDeployment: false #optional, default true
+          serviceId: ${{ secrets.MY_RENDER_SERVICE_ID }}
+          apiKey: ${{ secrets.MY_RENDER_API_KEY }}
